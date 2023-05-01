@@ -1,0 +1,671 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body {
+    background-color: #f5f5f5;
+    line-height: 1.5;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+:root {
+    --main-col : #0078ff;
+    --title-col : #1e1e1e;
+    --paragraph-col : #4e4e4e;
+}
+
+
+/* Nav Style */
+nav {
+    background-color: rgba(0, 0, 0, .3);
+}
+nav ul li {
+    padding: 0 10px;
+}
+nav .navbar-brand {font-size: 1.6rem;}
+nav .navbar-nav .nav-item .nav-link {
+    position: relative;
+    color: #fff;
+}
+/* nav .navbar-nav .nav-item .nav-link .active { color: var(--main-col) !important;} */
+nav .navbar-nav .nav-item .nav-link:hover, nav .navbar-brand:hover { color: var(--main-col);}
+nav .nav-link::after {
+    position: absolute;
+    content: "";
+    left: .5rem;
+    bottom: 0;
+    background-color: #fff;
+    width: 30px;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: all .5s ease;
+}
+
+nav .active::after { transform: scaleX(1);}
+nav .nav-link:hover::after { 
+    transform: scaleX(1);
+}
+
+
+/* Header Style */
+header {
+    background-image: url(DevFoli-Img/intro-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+}
+header h1{
+    font-size: 4.5rem;
+}
+header p::after {
+    content: "|";
+    font-size: 2.5rem;
+    animation-duration: 15s;
+    animation-name: slide-show;
+    animation-iteration-count: infinite;
+}
+@keyframes slide-show {
+    .75% {content:"|";}
+    1.5% {content:"C|";}
+    2.25% {content:"CE|";}
+    3% {content:"CEO|";}
+    3.75% {content:"CEO |";}
+    4.5% {content:"CEO D|";}
+    5.25% {content:"CEO De|";}
+    6% {content:"CEO Dev|";}
+    6.75% {content:"CEO DevF|";}
+    7.5% {content:"CEO DevFo|";}
+    8.25% {content:"CEO DevFol|";}
+    9% {content:"CEO DevFoli|";}
+    9.75% {content:"CEO DevFolio|";}
+    10.5% {content:"CEO DevFoli|";}
+    11.25% {content:"CEO DevFol|";}
+    12% {content:"CEO DevFo|";}
+    12.75% {content:"CEO DevF|";}
+    13.5% {content:"CEO Dev|";}
+    14.25% {content:"CEO De|";}
+    15% {content:"CEO D|";}
+    15.75% {content:"CEO |";}
+    16.25% {content:"CEO|";}
+    17% {content:"CE|";}
+    17.75% {content:"C|";}
+    18.5% {content:"|";}
+    19.25% {content:"W|";}
+    20% {content:"We|";}
+    20.75% {content:"Web|";}
+    21.5% {content:"Web |";}
+    22.25% {content:"Web D|";}
+    23% {content:"Web De|";}
+    23.75% {content:"Web Dev|";}
+    24.5% {content:"Web Deve|";}
+    25.25% {content:"Web Devel|";}
+    26% {content:"Web Develo|";}
+    26.75% {content:"Web Develop|";}
+    27.5% {content:"Web Develope|";}
+    28.25% {content:"Web Developer|";}
+    29% {content:"Web Develope|";}
+    29.75% {content:"Web Develop|";}
+    30.5% {content:"Web Develo|";}
+    31.25% {content:"Web Devel|";}
+    32% {content:"Web Deve|";}
+    32.75% {content:"Web Dev|";}
+    33.5% {content:"Web De|";}
+    34.25% {content:"Web D|";}
+    35% {content:"Web De|";}
+    35.75% {content:"Web Des|";}
+    36.5% {content:"Web Desi|";}
+    37.25% {content:"Web Desig|";}
+    38% {content:"Web Design|";}
+    38.75% {content:"Web Designe|";}
+    39.5% {content:"Web Designer|";}
+    40.25% {content:"Web Designe|";}
+    41% {content:"Web Design|";}
+    41.75% {content:"Web Desig|";}
+    42.5% {content:"Web Desi|";}
+    43.25% {content:"Web Des|";}
+    44% {content:"Web De|";}
+    44.75% {content:"Web D|";}
+    45.5% {content:"Web |";}
+    46.25% {content:"Web|";}
+    47% {content:"We|";}
+    47.75% {content:"W|";}
+    48.5% {content:"|";}
+    49.25% {content:"F|";}
+    50% {content:"Fr|";}
+    50.75% {content:"Fro|";}
+    51.5% {content:"Fron|";}
+    52.25% {content:"Front|";}
+    53% {content:"Fronte|";}
+    53.75% {content:"Fronten|";}
+    54.5% {content:"Frontend|";}
+    55.25% {content:"Frontend |";}
+    56% {content:"Frontend D|";}
+    56.75% {content:"Frontend De|";}
+    57.5% {content:"Frontend Dev|";}
+    58.25% {content:"Frontend Deve|";}
+    59% {content:"Frontend Devel|";}
+    59.75% {content:"Frontend Develo|";}
+    60.5% {content:"Frontend Develop|";}
+    61.25% {content:"Frontend Develope|";}
+    62% {content:"Frontend Developer|";}
+    62.75% {content:"Frontend Develope|";}
+    63.5% {content:"Frontend Develop|";}
+    64.25% {content:"Frontend Develo|";}
+    65% {content:"Frontend Devel|";}
+    65.75% {content:"Frontend Deve|";}
+    66.50% {content:"Frontend Dev|";}
+    67.25% {content:"Frontend De|";}
+    68% {content:"Frontend D|";}
+    68.75% {content:"Frontend |";}
+    69.5% {content:"Frontend|";}
+    70.25% {content:"Fronten|";}
+    71% {content:"Fronte|";}
+    71.75% {content:"Front|";}
+    72.5% {content:"Fron|";}
+    73.25% {content:"Fro|";}
+    74% {content:"Fr|";}
+    74.75% {content:"F|";}
+    75.5% {content:"|";}
+    76.25% {content:"G|";}
+    77% {content:"Gr|";}
+    77.75% {content:"Gra|";}
+    78.5% {content:"Grap|";}
+    79.25% {content:"Graph|";}
+    80% {content:"Graphi|";}
+    80.75% {content:"Graphic|";}
+    81.5% {content:"Graphic |";}
+    82.25% {content:"Graphic D|";}
+    83% {content:"Graphic De|";}
+    83.75% {content:"Graphic Des|";}
+    84.5% {content:"Graphic Desi|";}
+    85.25% {content:"Graphic Desig|";}
+    86% {content:"Graphic Design|";}
+    86.75% {content:"Graphic Designe|";}
+    87.5% {content:"Graphic Designer|";}
+    88.25% {content:"Graphic Designe|";}
+    89% {content:"Graphic Design|";}
+    89.75% {content:"Graphic Desig|";}
+    90.5% {content:"Graphic Desi|";}
+    91.25% {content:"Graphic Des|";}
+    92% {content:"Graphic De|";}
+    92.75% {content:"Graphic D|";}
+    93.5% {content:"Graphic |";}
+    94.25% {content:"Graphic|";}
+    95% {content:"Graphi|";}
+    95.75% {content:"Graph|";}
+    96.5% {content:"Grap|";}
+    97.25% {content:"Gra|";}
+    98% {content:"Gr|";}
+    98.75% {content:"G|";}
+    99.5% {content:"|";}
+}
+
+
+/* About Style */
+#about {
+    padding-top: 4rem;
+    text-align: left;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.content {
+    padding: 4rem 3rem;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 6%), 0 2px 5px 0 rgb(0 0 0 / 20%);
+}
+#about .content .col-md-7 .span {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--paragraph-col);
+}
+#about .content .title-about {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--title-col);
+}
+#about .content .progress {
+    height: .7rem;
+    margin: .5rem 0 1.2rem;
+}
+.intro h5::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    background-color: var(--main-col);
+    width: 100px;
+    bottom: -12px;
+}
+#about .intro .custom-p {
+    font-weight: 300;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--paragraph-col);
+}
+
+
+/* Services Style */
+.head-title {
+    margin-bottom: 4rem;
+}
+.head-title h3 {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    color: var(--title-col);
+}
+.head-title p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--paragraph-col);
+}
+.head-title .line {
+    width: 40px;
+    height: 5px;
+    margin: 0 auto;
+    background-color: var(--main-col);
+}
+#services .service-box {
+    box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+    background-color: #fff;
+    padding: 2.5rem 1.3rem;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+#services .service-box .circle {
+    height: 100px;
+    width: 100px;
+    font-size: 2rem;
+    border-radius: 50%;
+    line-height: 1.55;
+    margin: 0 auto 1rem auto;
+    box-shadow: 0 0 0 10px #0078ff;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s ease;
+}
+#services .service-box .circle i { 
+    font-size: 3.5rem; 
+    color: var(--title-col);
+    transition: all .5s ease;
+}
+#services .service-box:hover .circle {
+    box-shadow: 0 0 0 10px #cde1f8;
+    background-color: var(--main-col);
+}
+#services .service-box:hover .circle i {color: #fff;}
+#services .service-content h2 {
+    text-transform: uppercase;
+    color: var(--title-col);
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 0.4rem 0;
+}
+#services .service-content p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--paragraph-col);
+}
+
+
+/* Achievement Style */
+.achievements {
+    box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+    background-image: url(DevFoli-Img/post-3.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 8rem 0;
+}
+.over-lay {
+    background-color: var(--main-col);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0px;
+    padding: 0;
+    opacity: .7;
+}
+.achievements .icon-box {
+    height: 60px;
+    width: 60px;
+    font-size: 2rem;
+    border-radius: 50%;
+    line-height: 1.55;
+    margin: 0 auto 1rem auto;
+    box-shadow: 0 0 0 10px #cde1f8;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.achievements .icon-box i {color: #fff;}
+.achievements .achieve-num p {
+    font-size: 2rem;
+}
+.achievements .achieve-num span {
+    font-size: 1rem;
+}
+
+
+/* Work Style */
+#work {
+    padding-top: 4rem;
+}
+.portfolio .work-box { 
+    margin-bottom: 3rem;
+    box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+}
+.portfolio .work-box .work-img img {
+    transition: all 1s;
+}
+.portfolio .work-box .work-img:hover img{
+    transform: scale(1.3);
+}
+.portfolio .work-content {
+    padding: 2rem 3% 1rem 4%;
+}
+.portfolio .work-content h2 {
+    font-size: 1.2rem;
+    color: var(--title-col);
+}
+.portfolio .work-content span {
+    font-size: .8rem;
+    font-weight: 400;
+    color: var(--main-col);
+}
+.portfolio .work-content span .date {
+    font-weight: 400;
+    color: var(--paragraph-col);
+}
+.portfolio .work-content .add-icon i {
+    font-size: 2.5rem;
+    color: var(--main-col);
+}
+
+
+/* Profile Style */
+.profile {
+    box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+    background-image: url(DevFoli-Img/overlay-bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 8rem 0;
+}
+.profile .carousel-inner img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.profile .carousel-inner .quote-icon {
+    width: 3.25rem;
+    height: 3.25rem;
+    margin: 0 auto;
+    line-height: 1.6;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.profile .carousel-inner h4 {
+    font-weight: 600;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+.profile .carousel-inner p {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+.profile .carousel-inner .quote-icon i{
+    font-size: 2rem;
+    color: var(--main-col);
+}
+.profile .carousel-indicators button {
+    position: relative;
+    width: 18px;
+    height: 7px;
+    margin: 5px 5px;
+    transition: all .6s ease-in-out;    
+}
+.profile .carousel-indicators button::before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    top: -5px;
+    left: -5px;
+    border-radius: 2px;
+    border: 2px solid var(--title-col);
+    display: none;
+    transition: all .6s ease-in-out;   
+}
+.profile .carousel-indicators button::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 14px);
+    height: calc(100% + 14px);
+    top: -7px;
+    left: -7px;
+    border-radius: 4px;
+    border: 2px solid #fff;
+    display: none;
+    transition: all .6s ease-in-out;   
+}
+.profile .carousel-indicators button:focus {
+    width: 25px;
+    background-color: #1B1B1B;
+}
+.profile .carousel-indicators button:focus::before{ display: inline; }
+.profile .carousel-indicators button:focus::after{ display: inline; }
+
+
+/* Blog Style */
+#blog {
+    padding-top: 4rem;
+}
+#blog .card-blog {
+    box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    word-wrap: break-word;
+}
+#blog .card-blog .card-img {
+    border-radius: calc(0.25rem - 1px)
+}
+.card-img .category {
+    border-radius: 4px;
+    padding: 0 15px 5px;
+    background-color: var(--main-col);
+}
+.card-img .category h6 {
+    font-size: .7rem;
+    letter-spacing: .1px;
+    text-transform: uppercase;
+}
+#blog .card-blog .card-body {
+    padding: 1.25rem;
+}
+#blog .card-blog .card-body h3, a{
+    line-height: 1.2;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-top: .6rem;
+    margin-bottom: .75rem;
+    color: var(--title-col);
+}
+#blog .card-body p {
+    color: var(--paragraph-col);
+}
+#blog .card-footer {
+    padding: 0.75rem 1.25rem;
+    background-color: rgba(0,0,0,.03);
+    border-top: 1px solid rgba(0,0,0,.125);
+}
+.card-footer img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 4px;
+    border-radius: 50%;
+}
+.card-footer span {
+    color: var(--title-col);
+    transition: all .5s ease-in-out;
+}
+.card-footer a:hover span {
+    color: var(--main-col);
+}
+.card-footer .post-date {
+    color: var(--paragraph-col);
+}
+
+
+/* Contact Style */
+#contact {
+    box-shadow: 0 13px 8px -10px rgb(0 0 0 / 10%);
+    background-image: url(DevFoli-Img/overlay-bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 5rem 0 4rem 0;
+}
+#contact .contact-box {
+    margin-top: 4rem;
+}
+#contact .contact-info {
+    background-color: #fff;
+    margin-bottom: 3rem;
+    z-index: 2;
+    position: relative;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 6%), 0 2px 5px 0 rgb(0 0 0 / 20%);
+}
+#contact .info-fill .submit-button {
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 5rem;
+    padding: 0.9rem 2.3rem;
+    border: 1px solid #cde1f8;
+    background-color: var(--main-col);
+    transition: all 500ms ease;
+}
+#contact .info-fill .submit-button:hover {
+    background-color: #0062d3;
+    box-shadow: 0 0 0 4px #cde1f8;
+}
+#contact .contact-info .info-illustrate {
+    line-height: 1.5;
+    font-weight: 300;
+    font-size: 1.25rem;
+    color: var(--paragraph-col);
+}
+#contact .contact-info .contact-icon i {
+    line-height: 2;
+    margin-right: 10px;
+    color: var(--main-col);
+}
+#contact .contact-info .contact-icon li {
+    font-size: 1rem;
+    color: var(--paragraph-col);
+}
+#contact .contact-info .social-icons .icon {
+    width: 40px;
+    height: 40px;
+    line-height: 1.4;
+    border-radius: 50%;
+    margin: 0 1rem 0 0;
+    cursor: pointer;
+    transition: all .5s ease;
+    box-shadow: 0 0 0 3px #0078ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#contact .contact-info .social-icons .icon:hover {
+    box-shadow: 0 0 0 3px #cde1f8;
+    background-color: var(--main-col);
+}
+#contact .contact-info .social-icons i {
+    font-size: 1.5rem;
+}
+#contact .contact-info .social-icons .icon:hover i {
+    color: #fff;
+}
+#contact footer .animate {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50%;
+    transition: all 1s;
+    color: var(--main-col);
+    background-color: #fff;
+}
+#contact footer .animate::before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    border-radius: 50%;
+    border: 5px solid;
+    transition: all 1s;
+    border-color: rgba(0, 0, 0, .3) transparent rgba(0, 0, 0, .3) rgba(0, 0, 0, .3);
+}
+#contact footer .animate::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    border-radius: 50%;
+    border: 5px solid;
+    transition: all 1s;
+    border-color: rgba(0, 0, 0, .2) rgba(0, 0, 0, .2) rgba(0, 0, 0, .2) transparent; 
+}
+#contact footer .animate:hover { color: #fff; background-color: var(--main-col); transform: scale(1.1);}
+#contact footer .animate:hover::after { transform: rotate(1turn); border-color: #fff #fff #fff transparent; opacity: .2;}
+#contact footer .animate:hover::before { transform: rotate(1turn); border-color: #f5f5f5 transparent #f5f5f5 #f5f5f5; opacity: .5;}
+
+/* Media Adjustment */
+@media screen and (max-width:768px) {
+    nav .nav-link::after {
+        left: 0;
+    }
+}
+@media screen and (max-width:768px) {
+    header h1{ font-size: 2.5rem;}
+    header p::after {font-size: 1.5rem;}
+}
+@media screen and (min-width:768px) and (max-width:992px) {
+    #about .content .col-sm-5 figure img{
+        max-width: 100%;
+    }
+}
+@media screen and (max-width:768px) {
+    .intro-title {
+        margin-top: 1.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
